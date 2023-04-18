@@ -24,9 +24,24 @@ import("../DATA.json").then(({ default: JsonData }) => {
 });
 
 const menu = document.querySelector("#menu");
+const hero = document.querySelector(".hero");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 const drawer = document.querySelector("#drawer");
 
 menu.addEventListener("click", function (event) {
   drawer.classList.toggle("open");
   event.stopPropagation();
+});
+
+hero.addEventListener("click", function () {
+  drawer.classList.remove("open");
+});
+
+main.addEventListener("click", function () {
+  drawer.classList.remove("open");
+});
+
+footer.addEventListener("click", function () {
+  drawer.classList.remove("open");
 });
